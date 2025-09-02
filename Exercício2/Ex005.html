@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="#F5F5DC">
+    <h1 style="color: red;">Java (linguagem de programação)</h1>
+    <p>Java é uma linguagem de programação orientada a objetos , de alto nível , de uso geral e com segurança de memória . Ela foi criada para permitir que os programadores escrevam uma vez, executem em qualquer lugar ( WORA ), o que significa que o código Java compilado pode ser executado em todas as plataformas que suportam Java sem a necessidade de recompilação. Os aplicativos Java são normalmente compilados em bytecode que pode ser executado em qualquer máquina virtual Java (JVM), independentemente da arquitetura do computador subjacente . A sintaxe do Java é semelhante à do C e C++ , mas tem menos recursos de baixo nível do que qualquer um deles. O tempo de execução Java fornece recursos dinâmicos (como reflexão e modificação de código em tempo de execução) que normalmente não estão disponíveis em linguagens compiladas tradicionais.</p>
+    <h2 style="color: rgb(255, 20, 224);">Java JVM e bytecode</h3>
+    <p>Um objetivo de design do Java é a portabilidade , o que significa que programas escritos para a plataforma Java devem rodar de forma similar em qualquer combinação de hardware e sistema operacional com suporte de tempo de execução adequado. Isso é alcançado compilando o código da linguagem Java para uma representação intermediária chamada bytecode Java , em vez de diretamente para código de máquina específico da arquitetura . Instruções de bytecode Java são análogas ao código de máquina, mas elas são destinadas a serem executadas por uma máquina virtual (VM) escrita especificamente para o hardware host. Usuários finais geralmente usam um Java Runtime Environment (JRE) instalado em seus dispositivos para aplicativos Java autônomos ou um navegador web para applets Java .</p>
+    <h3 style="color: blue;">Desempenho</h3>
+    <p>Programas escritos em Java têm a reputação de serem mais lentos e exigirem mais memória do que aqueles escritos em C++ . No entanto, a velocidade de execução dos programas Java melhorou significativamente com a introdução da compilação just-in-time em 1997/1998 para Java 1.1 ,  a adição de recursos de linguagem que oferecem suporte a melhor análise de código (como classes internas, a classe StringBuilder, asserções opcionais, etc.) e otimizações na máquina virtual Java, como o HotSpot se tornando a JVM padrão da Sun em 2000. Com o Java 1.5, o desempenho foi melhorado com a adição do java.util.concurrentpacote, incluindo implementações sem bloqueio de ConcurrentMaps e outras coleções multi-core, e foi melhorado ainda mais com o Java 1.6.</p>
+    <h4 style="color: blueviolet;">Gerenciamento automático de memória</h4>
+    <p>Java usa um coletor de lixo automático para gerenciar a memória no ciclo de vida do objeto . O programador determina quando os objetos são criados, e o tempo de execução Java é responsável por recuperar a memória quando os objetos não estão mais em uso. Quando não há mais referências a um objeto, a memória inacessível se torna elegível para ser liberada automaticamente pelo coletor de lixo. Algo semelhante a um vazamento de memória ainda pode ocorrer se o código de um programador contiver uma referência a um objeto que não é mais necessário, normalmente quando objetos que não são mais necessários são armazenados em contêineres que ainda estão em uso. Se métodos para um objeto inexistente forem chamados, uma exceção de ponteiro nulo será lançada.</p>
+</body>
+</html>
