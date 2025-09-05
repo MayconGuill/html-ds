@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #p1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+            line-height: 3cap;
+            letter-spacing: normal;
+        }
+        #uppercase{
+            text-transform: uppercase;
+        }
+        #p2{
+            text-decoration: underline;
+        }
+
+        ol li{
+            color: rgb(3, 94, 18);
+        }
+
+        ul li{
+            color: blueviolet;
+        }
+        img{
+            width: 500px;
+        }
+        #paragrafos{
+            background-color: yellowgreen;
+            border-radius: 1cap;
+            text-align: center;
+        }
+        #listas{
+            background-color: yellow;
+            border-radius: 1cap;
+            text-align: center;
+            list-style-position: inside;
+        }
+        #imagem{
+            background-color: brown;
+            border-radius: 1cap;
+            text-align: center;
+        }
+    </style>
+
+    <header>
+        <h2>Sobre Mim</h2>
+        <hr>
+        <a href="/Exercício4/Ex001.html" target="_blank">home</a> |
+        <a href="#paragrafos">sobre mim</a> |
+        <a href="#metas">metas</a> |
+        <a href="#hobbies">hobbies</a>
+    </header>
+
+    <main>
+        <div id="paragrafos">
+            <p id="p1">
+                <strong>
+                    Tenho estudado Java como minha linguagem principal e me aprofundado no ecossistema Spring. Gosto de aprender na prática, por isso, estou sempre desenvolvendo projetos onde aplico tudo o que venho estudando: <span id="uppercase">APIs REST, autenticação com JWT, versionamento com Flyway, deploy com AWS S3</span>, entre outros.
+                </strong>
+            </p>
+            <p>
+                <i>
+                Sou movido por tecnologia, resolução de problemas e aprendizado contínuo. Busco evoluir um passo de cada vez, com código limpo, boas práticas e curiosidade constante.
+                </i>
+            </p>
+            <p id="p2">
+                Meu objetivo hoje é iniciar minha carreira como desenvolvedor Java back-end e, no futuro, expandir para Full Stack, trabalhando com equipes reais, aprendendo com quem já está no mercado e contribuindo com projetos desafiadores.
+            </p>
+        </div>
+
+        <div id="listas">
+            <ol id="metas">
+                <li>Dominar o Java e ecossistema Spring</li>
+                <li>Conseguir minha primeira vaga back-end java até dezembro 2025</li>
+                <li>Me tornar fullStack</li>
+            </ol>
+
+            <ul id="hobbies">
+                <li>Programar</li>
+                <li>Escutar rock</li>
+                <li>Jogar</li>
+                <li>Assistir filme</li>
+                <li>Escutar podcast de programadores</li>
+            </ul>
+        </div>
+
+        <div id="imagem">
+            <img id="gatofeio" src="/Exercício/Img/Gato Feio.jpg" alt=""> <figcaption>Sei lá, só um gato bonito</figcaption>
+        </div>
+    </main>
+</body>
+</html>
