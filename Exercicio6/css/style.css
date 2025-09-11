@@ -1,0 +1,107 @@
+body {
+margin: 0;
+font-family: 'Orbitron', sans-serif;
+background: linear-gradient(135deg, blue, purple, lime);
+color: white;
+}
+
+
+header {
+position: fixed;
+top: 0;
+width: 100%;
+background: rgba(255,255,255,0.1);
+padding: 10px;
+text-align: center;
+}
+
+
+nav a {
+margin: 0 10px;
+color: white;
+text-decoration: none;
+}
+
+
+main {
+display: flex;
+justify-content: space-around;
+padding: 80px 20px;
+}
+
+
+h1 {
+text-shadow: 0 0 5px cyan, 0 0 10px lime;
+}
+
+
+.botao {
+padding: 10px 20px;
+border: none;
+border-radius: 20px;
+background: purple;
+color: white;
+box-shadow: 0 0 10px cyan;
+cursor: pointer;
+transition: 0.3s;
+}
+
+
+.botao:hover {
+background: lime;
+}
+
+
+.div3d {
+margin-top: 20px;
+width: 100px;
+height: 100px;
+background: rgba(255,255,255,0.1);
+transform: rotateY(45deg);
+display: flex;
+align-items: center;
+justify-content: center;
+animation: move3d 2s infinite;
+}
+
+.pulse {
+margin-top: 20px;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+background: cyan;
+animation: pulsar 10s infinite;
+}
+
+
+@keyframes pulsar {
+0% { transform: scale(1); }
+50% { transform: scale(1.2); }
+100% { transform: scale(1); }
+}
+
+
+footer {
+text-align: center;
+padding: 20px;
+background: linear-gradient(270deg, blue, purple, lime);
+background-size: 400% 400%;
+animation: mover 6s infinite;
+}
+
+
+@keyframes mover {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
+
+@keyframes move3d {
+    0% {transform: rotateX(0);}
+    20% {transform: rotateY(20deg);}
+    40% {transform: rotateX(40deg);}
+    60% {transform: rotateY(70deg);}
+    65% {transform: rotateY(40deg);}
+    80% {transform: rotateX(20deg);}
+    100% {transform: rotateX(0);}
+}
