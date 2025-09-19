@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Perfil de Usuário</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .profile-header {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            border-radius: .5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container my-5">
+        <!-- 1. Layout do Perfil -->
+        <div class="profile-header mb-4">
+            <div class="row align-items-center">
+                <!-- Coluna da Foto -->
+                <div class="col-md-3 text-center">
+                    <!-- 2. Imagem de Perfil -->
+                    <img src="img/eu2.jpeg" alt="Foto do Perfil" class="img-fluid rounded-circle border border-2 border-primary p-1">
+                </div>
+                <!-- Coluna das Informações -->
+                <div class="col-md-9">
+                    <h2 class="display-5">Janderson da Silva</h2>
+                    <p class="text-muted">@jandersonslv_</p>
+                    <p>Olá! Meu nome é Janderson da Silva. Tenho 24 anos e atualmente moro em Salvador. Sou estudante de Desenvolvimento de Sistemas, apaixonado por tecnologia e inovação. 
+                    Estou sempre buscando aprender coisas novas e aprimorar minhas habilidades na área de programação e desenvolvimento web.</p>
+                    <!-- 5. Botões de Ação -->
+                    <div class="mt-3">
+                        <button class="btn btn-primary">
+                            <i class="bi bi-person-plus-fill me-1"></i> Adicionar Amigo
+                        </button>
+                        <button class="btn btn-outline-secondary">
+                            <i class="bi bi-pencil-square me-1"></i> Editar Perfil
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Componente Navs & Tabs -->
+        <ul class="nav nav-tabs" id="profileTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="posts-tab" data-bs-toggle="tab" data-bs-target="#posts-tab-pane" type="button" role="tab" aria-controls="posts-tab-pane" aria-selected="true">Minhas Postagens</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="friends-tab" data-bs-toggle="tab" data-bs-target="#friends-tab-pane" type="button" role="tab" aria-controls="friends-tab-pane" aria-selected="false">Lista de Amigos</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="photos-tab" data-bs-toggle="tab" data-bs-target="#photos-tab-pane" type="button" role="tab" aria-controls="photos-tab-pane" aria-selected="false">Galeria de Fotos</button>
+            </li>
+        </ul>
+
+        <!-- 4. Conteúdo das Abas -->
+        <div class="tab-content" id="profileTabContent">
+            <!-- Conteúdo da Aba "Minhas Postagens" -->
+            <div class="tab-pane fade show active p-3" id="posts-tab-pane" role="tabpanel" aria-labelledby="posts-tab" tabindex="0">
+                <!-- Card de Postagem 1 -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Explorando bootstrap!</h5>
+                        <p class="card-text">Hoje foi um dia incrível de imersão no código. 
+                        Entender a lógica dos componentes, alinhar tudo no grid e ver a página se adaptar a qualquer tela foi desafiador. 
+                        Mas o resultado final, um layout limpo e funcional, fez todo o esforço valer a pena!</p>
+                        <p class="card-text"><small class="text-muted">Postado há 2 horas</small></p>
+                    </div>
+                </div>
+                <!-- Card de Postagem 2 -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Novo projeto: aprendendo CSS</h5>
+                        <p class="card-text">Colocando os estudos de CSS em prática! Feliz em compartilhar o site que estou construindo para aprender. 
+                        Cada linha de código é um novo conhecimento. O caminho é longo, mas estou curtindo o processo. Confiram a evolução!</p>
+                        <p class="card-text"><small class="text-muted">Postado há 1 dia</small></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conteúdo da Aba "Lista de Amigos" -->
+            <div class="tab-pane fade p-3" id="friends-tab-pane" role="tabpanel" aria-labelledby="friends-tab" tabindex="0">
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <img src="img/rodrigo.jpg" style="width: 40px; height: 40px;" class="rounded-circle me-2" alt="Amigo 1">
+                            <strong>Rodrigo Reis</strong>
+                        </div>
+                        <span class="badge bg-primary rounded-pill">12 amigos em comum</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                         <div>
+                            <img src="img/gustavo.jpg" style="width: 40px; height: 40px;" class="rounded-circle me-2" alt="Amigo 2">
+                            <strong>Gustavo Lima</strong>
+                        </div>
+                        <span class="badge bg-primary rounded-pill">7 amigos em comum</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                         <div>
+                            <img src="img/arthur.jpg" style="width: 40px; height: 40px;" class="rounded-circle me-2" alt="Amigo 3">
+                            <strong>Arthur Torres</strong>
+                        </div>
+                        <span class="badge bg-primary rounded-pill">5 amigos em comum</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                         <div>
+                            <img src="img/maycon.jpg" style="width: 40px; height: 40px;" class="rounded-circle me-2" alt="Amigo 3">
+                            <strong>Maycon Guill</strong>
+                        </div>
+                        <span class="badge bg-primary rounded-pill">3 amigos em comum</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Conteúdo da Aba "Galeria de Fotos" -->
+            <div class="tab-pane fade p-3" id="photos-tab-pane" role="tabpanel" aria-labelledby="photos-tab" tabindex="0">
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <img src="img/grupo.jpg" class="img-fluid img-thumbnail" alt="Foto 1">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <img src="img/grupo2.jpeg" class="img-fluid img-thumbnail" alt="Foto 2">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <img src="img/grupo3.jpeg" class="img-fluid img-thumbnail" alt="Foto 3">
+                    </div>
+                     <div class="col-md-4 mb-3">
+                        <img src="img/mo.jpeg" class="img-fluid img-thumbnail" alt="Foto 4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle com Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

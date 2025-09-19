@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page - Nosso App</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        /* Estilos para o carrossel */
+        .carousel-item {
+            height: 90vh; /* Altura do carrossel, 90% da altura da viewport */
+            min-height: 350px;
+            background: no-repeat center center scroll;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        /* Sobreposição escura para melhor legibilidade do texto no carrossel */
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+        }
+        /* Estilos para a seção de recursos */
+        .feature-icon {
+            font-size: 3rem;
+            color: #0d6efd; /* Cor azul primária do Bootstrap */
+        }
+        /* Estilos para a seção CTA */
+        .cta-section {
+            padding: 5rem 0;
+            background-color: #f8f9fa; /* Cor de fundo suave */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho com navegação simples -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Meu App</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Recursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cta">Download</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Carrossel de Tela Cheia -->
+    <header>
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- 2. Indicadores -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active" style="background-image: url('https://placehold.co/1920x1080/444/fff?text=Tela+do+App+1')">
+                    <!-- 3. Legenda (Caption) -->
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Gerencie Suas Tarefas</h5>
+                        <p>Organize seu dia com uma interface simples e intuitiva.</p>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-item" style="background-image: url('https://placehold.co/1920x1080/555/fff?text=Tela+do+App+2')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Analise Seu Progresso</h5>
+                        <p>Gráficos e relatórios detalhados para acompanhar sua produtividade.</p>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-item" style="background-image: url('https://placehold.co/1920x1080/666/fff?text=Tela+do+App+3')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Colabore com Sua Equipe</h5>
+                        <p>Compartilhe projetos e delegue tarefas de forma eficiente.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Controles -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- 4. Seção de "Recursos" -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Recursos Incríveis</h2>
+            <div class="row text-center">
+                <!-- Recurso 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="feature-icon mb-3">
+                        <i class="bi bi-speedometer2"></i>
+                    </div>
+                    <h3>Rápido e Eficiente</h3>
+                    <p class="text-muted">Nossa tecnologia de ponta garante uma experiência de uso fluida e sem atrasos.</p>
+                </div>
+                <!-- Recurso 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="feature-icon mb-3">
+                        <i class="bi bi-shield-lock"></i>
+                    </div>
+                    <h3>Segurança Total</h3>
+                    <p class="text-muted">Seus dados são criptografados e armazenados com os mais altos padrões de segurança.</p>
+                </div>
+                <!-- Recurso 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="feature-icon mb-3">
+                        <i class="bi bi-cloud-arrow-down"></i>
+                    </div>
+                    <h3>Sincronização na Nuvem</h3>
+                    <p class="text-muted">Acesse suas informações de qualquer dispositivo, a qualquer momento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Chamada para Ação (CTA) -->
+    <section id="cta" class="cta-section text-center">
+        <div class="container">
+            <h2 class="mb-4">Pronto para começar?</h2>
+            <p class="lead mb-4">Baixe nosso aplicativo agora e transforme sua produtividade!</p>
+            <a href="#" class="btn btn-primary btn-lg px-5 py-3">
+                <i class="bi bi-google-play me-2"></i> Baixar para Android
+            </a>
+            <a href="#" class="btn btn-dark btn-lg px-5 py-3 ms-2">
+                <i class="bi bi-apple me-2"></i> Baixar para iOS
+            </a>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="py-4 bg-dark text-white text-center">
+        <div class="container">
+            <p class="m-0">Copyright &copy; Meu App 2025</p>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS Bundle com Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
