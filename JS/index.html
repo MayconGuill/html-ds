@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercícios JavaScript</title>
+</head>
+<body>
+
+  <h1>Exercícios de JavaScript</h1>
+
+  <!-- Exercício 1 -->
+  <section>
+    <h2>Exercício 1 Capturar e mostrar mensagem</h2>
+    <input type="text" id="mensagem" placeholder="Digite algo">
+    <button onclick="mostrarMensagem()">Mostrar</button>
+    <p id="resultado1"></p>
+  </section>
+
+  <!-- Exercício 2 -->
+  <section>
+    <h2>Exercício 2 Somar dois números</h2>
+    <input type="number" id="num1" placeholder="Número 1">
+    <input type="number" id="num2" placeholder="Número 2">
+    <button onclick="somar()">Somar</button>
+    <p id="resultado2"></p>
+  </section>
+
+  <!-- Exercício 3 -->
+  <section>
+    <h2>Exercício 3 Alterar cor do texto</h2>
+    <p id="textoColorido">Este texto vai mudar de cor</p>
+    <button onclick="mudarCor('red')">Vermelho</button>
+    <button onclick="mudarCor('green')">Verde</button>
+    <button onclick="mudarCor('blue')">Azul</button>
+  </section>
+
+  <!-- Exercício 4 -->
+  <section>
+    <h2>Exercício 4 Lista de tarefas simples</h2>
+    <input type="text" id="tarefa" placeholder="Digite uma tarefa">
+    <button onclick="adicionarTarefa()">Adicionar</button>
+    <ul id="listaTarefas"></ul>
+  </section>
+
+  <!-- Exercício 5 -->
+  <section>
+    <h2>Exercício 5 Verificação de número par ou ímpar</h2>
+    <input type="number" id="numero" placeholder="Digite um número">
+    <button onclick="verificar()">Verificar</button>
+    <p id="resultado5"></p>
+  </section>
+
+  <script>
+    // Exercício 1
+    function mostrarMensagem() {
+      const texto = document.getElementById('mensagem').value;
+      document.getElementById('resultado1').textContent = texto;
+    }
+
+    // Exercício 2
+    function somar() {
+      const n1 = Number(document.getElementById('num1').value);
+      const n2 = Number(document.getElementById('num2').value);
+      let resultado = n1 + n2;
+      document.getElementById('resultado2').textContent = resultado;
+    }
+
+    // Exercício 3
+    function mudarCor(cor) {
+      document.getElementById('textoColorido').style.color = cor;
+    }
+
+    // Exercício 4
+    function adicionarTarefa() {
+      const texto = document.getElementById('tarefa').value;
+      if (texto.trim() !== "") {
+        const li = document.createElement('li');
+        li.textContent = texto;
+        document.getElementById('listaTarefas').appendChild(li);
+        document.getElementById('tarefa').value = "";
+      }
+    }
+
+    // Exercício 5
+    function verificar() {
+      const num = Number(document.getElementById('numero').value);
+      const resultado = (num % 2 === 0) ? "Par" : "Ímpar";
+      document.getElementById('resultado5').textContent = `O número ${num} é ${resultado}`;
+    }
+  </script>
+
+</body>
+</html>
