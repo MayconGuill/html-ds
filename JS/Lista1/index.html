@@ -60,8 +60,8 @@
 
     // Exercício 2
     function somar() {
-      const n1 = Number(document.getElementById('num1').value);
-      const n2 = Number(document.getElementById('num2').value);
+      let n1 = Number(document.getElementById('num1').value);
+      let n2 = Number(document.getElementById('num2').value);
       let resultado = n1 + n2;
       document.getElementById('resultado2').textContent = resultado;
     }
@@ -73,7 +73,7 @@
 
     // Exercício 4
     function adicionarTarefa() {
-      const texto = document.getElementById('tarefa').value;
+        let texto = document.getElementById('tarefa').value;
       if (texto.trim() !== "") {
         const li = document.createElement('li');
         li.textContent = texto;
@@ -84,8 +84,8 @@
 
     // Exercício 5
     function verificar() {
-      const num = Number(document.getElementById('numero').value);
-      const resultado = (num % 2 === 0) ? "Par" : "Ímpar";
+      let num = Number(document.getElementById('numero').value);
+      let resultado = (num % 2 === 0) ? "Par" : "Ímpar";
       document.getElementById('resultado5').textContent = `O número ${num} é ${resultado}`;
     }
   </script>

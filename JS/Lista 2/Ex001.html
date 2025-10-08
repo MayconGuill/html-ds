@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1 - Soma e Comparação</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+        }
+        input { 
+            margin-bottom: 10px; 
+            padding: 8px; 
+            width: 100px; 
+        }
+        button { 
+            padding: 10px 15px; 
+            cursor: pointer; 
+        }
+        #resultado { 
+            margin-top: 15px; 
+            font-weight: bold; 
+            border: 1px solid #ccc; 
+            padding: 10px; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 1: A + B vs C</h1>
+    <p>Insira três números para calcular a soma de A e B e verificar se é menor que C.</p>
+
+    <div>
+        <label for="inputA">Valor de A:</label>
+        <input type="number" id="inputA">
+    </div>
+    <div>
+        <label for="inputB">Valor de B:</label>
+        <input type="number" id="inputB">
+    </div>
+    <div>
+        <label for="inputC">Valor de C:</label>
+        <input type="number" id="inputC">
+    </div>
+
+    <button onclick="executarExercicio1()">Executar Cálculo</button>
+
+    <div id="resultado">
+        Aguardando execução...
+    </div>
+
+    <script>
+        function executarExercicio1() {
+            const A = Number(document.getElementById('inputA').value);
+            const B = Number(document.getElementById('inputB').value);
+            const C = Number(document.getElementById('inputC').value);
+            const resultadoDiv = document.getElementById('resultado');
+
+            const somaAB = A + B;
+            let mensagem = `A soma de A (${A}) e B (${B}) é: ${somaAB}.<br>`;
+
+            if (somaAB < C) {
+                mensagem += `A soma (${somaAB}) é **MENOR** que C (${C}).`;
+            } else {
+                mensagem += `A soma (${somaAB}) **NÃO** é menor que C (${C}).`;
+            }
+
+            resultadoDiv.innerHTML = mensagem;
+        }
+
+    </script>
+</body>
+</html>
