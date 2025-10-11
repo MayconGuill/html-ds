@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="calcular()">gerar</button>
+
+    <div id="resultado">
+        Aguardando execução...
+    </div>
+
+    <script>
+        function calcular() {
+            // i / j === 1 -> primo
+            let resultado = "";
+            for (let i = 2; i <= 100; i++) {
+                let primo = true;
+                for (let j = 2; j * j <= i; j++) {
+                    if (i % j === 0) {
+                        primo = false;
+                    }
+                }
+                if (primo) {
+                    resultado += `${i} `;
+                }
+            }
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+</body>
+</html>

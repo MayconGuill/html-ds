@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="calcular()">gerar</button>
+    <div id="resultado">
+        Aguardando execução...
+    </div>
+
+    <script>
+        function calcular() {
+            let resultado = 0;
+            for (let i = 1; i <= 100; i++) {
+                if (i % 2 === 0) {
+                    resultado += i;
+                }
+            }
+            document.getElementById("resultado").innerHTML = `${resultado}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="number" id="num1" placeholder="Digite um número">
+    <button onclick="calcular()">gerar</button>
+    
+    <div id="resultado">
+        Aguardando execução...
+    </div>
+
+
+    <script>
+        function calcular() {
+            let num = parseInt(document.getElementById("num1").value);
+            let resultado = "";
+            for (let i = 1; i <= 10; i++) {
+                resultado += `${num} x ${i} = ${num * i}<br>`;
+                document.getElementById("resultado").innerHTML = resultado;
+            }
+        }
+    </script>
+</body>
+</html>

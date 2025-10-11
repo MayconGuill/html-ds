@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="gerar()">gerar</button>
+    <div id="texto"></div>
+    <script>
+        function gerar() {
+            // 0, 1, 1, 2, 3, 5
+            let resultado = "";
+            for (let i = 0; i <= 100; i++) {
+                resultado += `${i}, ${i + 1}`
+                document.getElementById("texto").innerHTML = resultado;
+                                // 0 + 1 = resultado (1)
+                                // 1 + 2 = resultado (3)
+                                // 2 + 3 = resultado (5)
+
+            }
+        }
+    </script>
+</body>
+</html>
